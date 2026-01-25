@@ -1,0 +1,6 @@
+print("Bienvenue ! ")
+nom = input("Entrez votre nom et votre prénom : ")
+capital = int(input("Quel montant avez-vous investi ? "))
+interet = float(input("Entrez le taux d'intérêt auquel sera soumis votre investissement : "))
+total = capital * (1 + interet / 100)
+print(f"Bonjour {nom}, avec un investissement de {capital}€ avec un taux d'intérêt de {interet}%, votre capital après 1 ans sera de {total}€. ") 
