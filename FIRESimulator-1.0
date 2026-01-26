@@ -1,0 +1,22 @@
+
+print("Bienvenue ! ")
+objectif_capital = int(input("Entrez votre objectif de capital : "))
+
+# Sécurité
+while objectif_capital <= 0:
+    objectif_capital = int(input("Entrez un montant correct : "))
+
+mensualite = int(input("Quel est le montant des mensualités que vous souhaitez verser : "))
+
+# Algorithme
+capital_actuel = 0
+compteur_mois = 0
+
+while capital_actuel < objectif_capital:
+    capital_actuel += mensualite
+    compteur_mois += 1
+
+#Réponse
+annees = compteur_mois // 12
+mois = compteur_mois % 12
+print(f"Il faudra {annees} ans et {mois} mois pour atteindre {objectif_capital} euros.")
