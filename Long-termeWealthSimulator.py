@@ -20,10 +20,13 @@ interet = float(input("Entrez le taux d'intérêt auquel sera soumis votre place
 nb_annee = int(input("Entrez le nombre d'années sur lesquelles vous souhaitez investir : "))
 
 #Calcule
+capital_actuel = capital_depart
 versement_annuel = versement_mensuelle * 12
-rendement_final = capital_depart + versement_annuel * (1 + interet / 100)
-for i in range(nb_annee) : 
-    rendement_final = rendement_final + versement_annuel * (1 + interet / 100)
-print(rendement_final + capital_depart)
 
-#Fin du code
+for i in range(1, nb_annee + 1):
+    capital_actuel = (capital_actuel + versement_annuel) * (1 + interet / 100)
+    print(f"Année {i} : {capital_actuel:.2f} €") 
+
+
+
+
